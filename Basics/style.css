@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family : gillroy;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.red-box{
+    margin: 10px;
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}

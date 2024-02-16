@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family : Roboto;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+
+#navbar{
+    display: grid;
+    grid-template-columns: 50% 10% 10% 10% 10% 10%;
+    grid-template-rows: 100px;
+    background-color: #000000;
+    color: aliceblue;
+    justify-items: center;
+    align-items: center;
+}
+
+#navbar h1{
+    padding-left: 20px;
+    justify-self: start; /* justify-self is for child */
+    color: rgb(255, 255, 82);
+}
+
+#navbar h4{
+    font-weight: 500;
+    color: rgb(255, 255, 82);
+}
+
+#navbar img{
+    padding: 20px;
+    height: 100px;
+    justify-self: start; 
+}

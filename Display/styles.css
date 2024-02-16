@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.parent{
+    display: flex;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    height: 400px;
+    width: 400px;
+    background-color: #ab4343;
+}
+
+.child1{
+    width: 150px;
+    height: 150px;
+    background-color: #e69e9e;
+}
+.child2{
+    width: 150px;
+    height: 150px;
+    background-color: #010000;
+}
+.child3{
+    width: 150px;
+    height: 150px;
+    background-color: #372d2d;
+}
