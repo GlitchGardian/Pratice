@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Asap;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+}
+
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+
+nav {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(246, 211, 173);
+}
+
+.left-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.left-nav p {
+    font-weight: 600;
+}
+
+.left-nav span {
+    font-size: small;
+    font-weight: 400;
+}
+
+.box-blue {
+    height: 10px;
+    width: 10px;
+    background-color: blue;
+}
+
+.right-nav-res {
+    display: none;
+}
+
+.right-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    transition: all 0.5s;
+}
+
+.right-nav a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.left-header {
+    height: initial;
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.card {
+    width: 60%;
+    height: 80%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.photo {
+    text-align: center;
+    height: 45%;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.photo img {
+    object-fit: cover;
+    width: 50%;
+    height: 90%;
+    border-radius: 50%;
+}
+
+.name {
+    width: 40%;
+    text-align: center;
+}
+
+.name h1 {
+    text-align: center;
+}
+
+.border-blue {
+    background-color: blue;
+    border-radius: 3px;
+    height: 2px;
+    width: 5rem;
+}
+
+.collage-name {
+    width: 100%;
+}
+
+.collage-name p {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    line-height: 1.5rem;
+}
+
+.social-panel {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.social-panel i:hover {
+    transition: all 0.5s;
+}
+
+.social-panel i:hover {
+    color: rgb(250, 164, 164);
+}
+
+
+.right-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: start;
+    height: initial;
+    margin: 30px;
+    width: 60%;
+}
+
+.hi-there-text p {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.here {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+}
+
+.buttons button {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background: blue;
+    color: white;
+}
+
+.about-me {
+    width: 60%;
+    margin-top: 2rem;
+}
+
+.about-me p {
+    font-size: 1.02rem;
+    font-weight: 500;
+}
+
+footer {
+    background-color: rgb(246, 211, 173);
+    ;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+
+}
+
+.right-footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-footer p {
+    text-align: center;
+    margin: 0.3rem;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social i {
+    transition: all 0.5s;
+}
+
+.social i:hover {
+    color: rgb(250, 164, 164);
+}
+
+@media (max-width :600px) {
+
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: rgb(246, 211, 173);
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    .right-nav-res {
+        display: initial;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-header {
+        height: initial;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 90%;
+        height: 100%;
+    }
+
+    .name {
+        width: 50%;
+    }
+
+    .collage-name {
+        margin: 1rem;
+        width: 100%;
+    }
+
+
+    .right-header {
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .about-me {
+        width: 80%;
+    }
+    
+    .right-footer p {
+        text-align: center;
+        margin: 0.3rem;
+    }
+    
+    
+}
