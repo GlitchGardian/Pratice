@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Asap;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    height: 10%;
+    padding: 30px;
+}
+
+.first-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circles {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2px;
+}
+
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.nav-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+#Russia {
+    color: rgba(36, 35, 35, 0.836);
+}
+
+.nav-elements a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.second-nav {
+    padding-top: 20px;
+}
+
+.navelements2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navelements2 a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.center {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    overflow-y: hidden;
+}
+
+.center::-webkit-scrollbar{
+    background-color: transparent;
+    height: 0.5rem;
+}
+
+.center::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
+
+.brand {
+    height: 100%;
+    display: flex;
+    gap: 8rem;
+    align-items: baseline;
+    padding: 20px;
+}
+
+.numbers {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.after-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.after-number .light-text {
+    text-align: start;
+    color: rgba(36, 35, 35, 0.836);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.after-number .maintext {
+    font-size: 10rem;
+    font-weight: 200;
+}
+
+.bottom {
+    width: 100%;
+    height: 39.6%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.bottom::-webkit-scrollbar{
+    display: none;
+}
+
+.bottom img {
+    flex-shrink: 0;   /*nani image na thy  means kay pan nanu na thy original size ma rashe*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}

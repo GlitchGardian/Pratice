@@ -208,7 +208,6 @@ button:hover {
 
 footer {
     background-color: rgb(246, 211, 173);
-    ;
     height: 10%;
     width: 100%;
     display: flex;
@@ -265,6 +264,7 @@ footer {
     header {
         display: flex;
         flex-direction: column;
+        height: min-content;
     }
 
     .left-header {
@@ -297,11 +297,22 @@ footer {
     .about-me {
         width: 80%;
     }
-    
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+
+    .right-footer {
+        align-items: center;
+        justify-content: end;
+        gap: 0.5rem;
+    }
+
     .right-footer p {
         text-align: center;
         margin: 0.3rem;
     }
-    
-    
+
+
 }
