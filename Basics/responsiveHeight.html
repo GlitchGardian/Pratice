@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .parent {
+            min-height: 100%;  /* min-height 100% to leshe j pan jo ene aa height ochi lage to vadhare pan lay shake aapde 2 child lidha che 100vh height didhi che to have parent ni height to 100% j che to enithi vadhare height joshe to have min-height kaam lagshe and parent ni height 200vh kari deshe*/
+            width: 100%;
+            background-color: aqua;
+        }
+
+        .child1 {
+            width: 60%;
+            height: 100vh;
+            background-color: blue;
+        }
+
+        .child2 {
+            width: 60%;
+            height: 100vh;
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+    </div>
+
+</body>
+
+</html>
