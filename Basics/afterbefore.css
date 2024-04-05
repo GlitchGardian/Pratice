@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+
+.box{
+    height: 500px;
+    width: 500px;
+    background-color: lemonchiffon;
+}
+
+.box::after{
+    content: " hello";
+    font-size: xx-large;
+}
+
+.box::before{
+    content: "AKA "; 
+}

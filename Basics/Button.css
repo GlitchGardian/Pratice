@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    padding: 50px;
+}
+
+button {
+    color: rgb(25, 131, 223);
+    background-color: rgb(236, 220, 41);
+    padding: 20px 50px;
+    border: 4px solid rgb(25, 131, 223);
+    position: relative;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+button::after{
+    content: "";
+    height: 0;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all linear 0.5s;
+    z-index: -1;
+}
+
+button:hover::after{
+    height: 100%;
+
+}
+
+button:hover{
+    color: rgb(68, 255, 0);
+}

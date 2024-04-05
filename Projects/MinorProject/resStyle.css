@@ -1,0 +1,325 @@
+@media (max-width : 600px) {
+
+    nav {
+        height: 10%;
+        padding: 2vh;
+        justify-content: space-between;
+    }
+
+    .logo_model {
+        border: none;
+        width: auto;
+        height: 100%;
+    }
+
+    .logo_model img {
+        height: 200%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .logo_model>h5 {
+        display: none;
+    }
+
+    .other-nav-items {
+        width: auto;
+    }
+
+    .WM,
+    .abi,
+    .search {
+        display: none;
+    }
+
+    .ham-bur {
+        display: inline-block;
+    }
+
+    .ham-bur i {
+        font-size: 3vh;
+        font-weight: 6 00;
+    }
+
+
+    header {
+        height: 60%;
+        padding: 2vh;
+    }
+
+    .overlay {
+        height: 40%;
+    }
+
+
+    .overlay-text-and-round h5 {
+        font-size: 2.5vh;
+        line-height: 2.5vh;
+        letter-spacing: 0.3vh;
+        color: #ffffff;
+    }
+
+    .roundwithnumber {
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .exploreAndArrow {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .exploreAndArrow h5 {
+        font-size: 2vh;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .exploreAndArrow svg {
+        height: 3vh;
+        width: 3vh;
+    }
+
+    .scroll {
+        height: 20vh;
+        padding: 1vh;
+    }
+
+    .one-slide {
+        width: 200%;
+        gap: 1.3vh;
+    }
+
+    @keyframes infinitescroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(-100% - 1vh));
+        }
+    }
+
+    .img-model-name {
+        height: 60%;
+        width: 10%;
+    }
+
+    .img-model-name h5 {
+        font-size: 1.2vh;
+    }
+
+
+    .alphabets {
+        height: 10vw;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+    }
+
+    .alphabets::-webkit-scrollbar {
+        color: transparent;
+        height: 2px;
+    }
+
+    .alphabets::-webkit-scrollbar-thumb {
+        background-color: rgb(244, 112, 112);
+        border-radius: 50px;
+    }
+
+    .alphabets h6 {
+        font-size: 1.2vh;
+    }
+
+    .alphabets h5 {
+        font-size: 1vh;
+    }
+
+    .page-2 {
+        height: 50%;
+        justify-content: space-between;
+    }
+
+    .left-page2 {
+        width: 50%;
+    }
+
+
+    .right-page2 {
+        width: 50%;
+    }
+
+    .l-text-page2 p {
+        font-size: 0.8vh;
+    }
+
+    .r-text-page2 p {
+        font-size: 0.7vh;
+        color: #434242;
+    }
+
+
+    .page-3 {
+        width: auto;
+        height: 50%;
+        padding: 2vw;
+    }
+
+    .page-3>.vouge-text {
+        height: 7%;
+        width: 100%;
+    }
+
+    .vouge-text>p {
+        font-size: 2.5vh;
+    }
+
+    .vouge-text>p>span {
+        font-size: 2.5vh;
+    }
+
+    .page3-left-right-container {
+        height: 93%;
+        width: 100%;
+        /* padding: 2vw; */
+    }
+
+    .round-text-and-para {
+        width: 50%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+    .round-photo-arrow {
+        height: 50%;
+        width: 70%;  
+    }
+
+    .round-photo-arrow>i {
+        position: absolute;
+        font-size: 3vw;
+        top: 47%;
+    }
+
+    .round-text-and-para img {
+        height: 50%;
+        width: 70%;
+    }
+
+    .round-text-and-para p {
+        font-size: 1.2vh;
+        line-height: 1.2vh;
+    }
+
+    .page-3-right {
+        width: 60%;
+        height: 93%;
+    }
+
+    .page-3-right img {
+        width: 100%;
+    }
+
+
+    .page-4 {
+        height: 50%;
+        padding: 2vw;
+    }
+
+
+    .page-5-update {
+        height: 60%;
+        padding: 3vh 2vw;
+    }
+
+    .update-text h5 {
+        font-size: 2.3vh;
+        letter-spacing: 0.3vw;
+        margin-bottom: 3vh;
+    }
+
+    .elements {
+        height: 20%;
+        padding: 1vw 1.4vh;
+    }
+
+    .info p {
+        font-size: 1.1vh;
+    }
+
+    .photo-of-celeb {
+        width: 20%;
+    }
+
+    .photo-of-celeb img {
+        left: -50%;
+    }
+
+    .name-date {
+        width: auto;
+    }
+
+    .name-date h4 {
+        font-size: 2.5vh;
+    }
+
+    .name-date p {
+        font-size: 1.1vh;
+    }
+
+    .page-6 {
+        height: 50%;
+        padding: 2vw;
+    }
+
+    .right-page6 {
+        width: 50%;
+        height: 100%;
+    }
+
+    .right-page6 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .left-page6 {
+        height: 100%;
+    }
+
+    .movieshot-text h1 {
+        font-size: 2vh;
+        font-weight: 600;
+        letter-spacing: 0.3vw;
+    }
+
+    .para {
+        gap: 1.5vh;
+    }
+
+    .para h4 {
+        width: 100%;
+        font-size: 1.5vh;
+    }
+
+    .para h6 {
+        width: 100%;
+        font-size: 1.1vh;
+        color: #434242;
+    }
+
+    .imgs {
+        width: 100%;
+        height: 40%;
+    }
+
+    .prem-model-2020-container p {
+        font-size: 2.3vh;
+        -webkit-text-stroke: 1px black;
+        letter-spacing: 0.3vh;
+    }
+
+}
