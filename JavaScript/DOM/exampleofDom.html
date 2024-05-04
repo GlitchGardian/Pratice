@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom01</title>
+</head>
+<body>
+
+    <h2>Hey, </h2>
+    <button>Click here</button>
+
+    <script>
+        var h1 = document.querySelector("h2");
+        h1.textContent += "hello...!!"
+
+       var button01 =  document.querySelector("button")
+        button01.addEventListener("click",function(){
+            button01.textContent = "Clicked"
+        })
+        
+    </script>
+</body>
+</html>

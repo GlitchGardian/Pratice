@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: poppins;
+            color: white;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(15, 15, 15, 0.705);
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .text {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            z-index: 999;
+        }
+
+        h1 {
+            font-size: 20vh;
+            font-weight: 400;
+            line-height: 16vh;
+            text-transform: uppercase;
+        }
+
+        h1:nth-last-child(3) {
+            margin-top: 20%;
+            text-align: left;
+        }
+
+        h1:nth-last-child(2) {
+            text-align: center;
+
+        }
+
+        h1:nth-last-child(1) {
+            text-align: center;
+
+        }
+
+        .images img{
+            position: absolute;
+            top: 15%;
+            left: 40%;
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        img:nth-last-child(3){
+            rotate: 20deg;
+        }
+        img:nth-last-child(2){
+            rotate: 10deg;
+        }
+
+        .footer{
+            height: 50px;    
+            position: absolute;
+            bottom: 0; 
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="nav-bar">
+                <div class="left">
+                    <h3>Abhishek Bhatt</h3>
+                </div>
+                <div class="right">
+                    <h3>instagram</h3>
+                    <h3>gallery</h3>
+                    <h3>contect</h3>
+                </div>
+            </div>
+
+            <div class="text">
+                <h1>Hello i'm</h1>
+                <h1>Abhishek</h1>
+                <h1>bhatt</h1>
+            </div>
+
+            <div class="images">
+
+                <img id="i1" src="https://images.unsplash.com/photo-1616790876844-97c0c6057364?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBnaXJsfGVufDB8fDB8fHww"
+                    alt="">
+
+
+                <img id="i2" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXQlMjBnaXJsfGVufDB8fDB8fHww"
+                    alt="">
+
+
+                <img id="i3" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXQlMjBnaXJsfGVufDB8fDB8fHww"
+                    alt="">
+
+            </div>
+
+            <div class="footer">
+                <h3>Abhishek bhatt</h3>
+                <h3>a I.T Student in gmit,bhavnagar</h3>
+                <h3>Sem 6th</h3>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        // basically if we use timeline so things are invoked linebyline.
+
+        var tl = gsap.timeline(); //we have to use this method to use timeline.
+
+        tl.from(".left h3", {
+            opacity: 0,
+            y: -50,
+            delay: 0.3,
+            duration: 0.4
+        })
+        tl.from(".right h3", {
+            opacity: 0,
+            y: -50,
+            duration: 0.4,
+            stagger: 0.3
+        })
+        tl.from(".text h1", {
+            opacity: 0,
+            x: -100,
+            duration: 0.4,
+            stagger: 0.3
+        })
+        tl.from(".images img", {
+            opacity: 0,
+            rotate : 0,
+            duration: 0.4,
+            stagger: 0.3
+        })
+        tl.from(".footer h3",{
+            x : 100,
+            opacity : 0,
+            duration : 0.2,
+            stagger : 0.2
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

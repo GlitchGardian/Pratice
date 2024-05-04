@@ -1,0 +1,35 @@
+// aapde ek event listener dwara bovbadha alag alag element ni event handle kariye tene j ....
+
+// aa karva mate parent par listner add kari ne tene alag id ,class and tag thi handle kariye.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event deligation</title>
+</head>
+
+<body>
+
+    <div class="parent">
+        <button id="play">play</button>
+        <button id="pause">pause</button>
+    </div>
+
+    <script>
+        var parent = document.querySelector(".parent");
+        parent.addEventListener("click", function (detail) {
+            if (detail.target.id == "play") {  //this is called event deligation we will find the button by the id  
+                console.log("play songs");
+            }
+            else if (detail.target.id == "pause") {
+                console.log("Pause song") //this is called event deligation we will find the button by the id 
+            }
+        }
+        );
+    </script>
+</body>
+
+</html>

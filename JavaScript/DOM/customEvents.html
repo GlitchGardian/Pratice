@@ -1,0 +1,34 @@
+// make own events
+
+// 1. make event
+// 2. attech event
+// 3. dispatch event from that dom element in which you atteched the event
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>hello</button>
+
+    <script>
+
+        var eve = new Event("ccc")
+
+        document.querySelector("button")
+            .addEventListener("ccc", function () {
+                prompt("helooo event is occured how are you like this??")
+            });
+
+        document.querySelector("button").dispatchEvent(eve);
+    </script>
+</body>
+
+</html>

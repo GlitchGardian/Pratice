@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h4 id="h4">00:00:00</h4>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+    
+    <script>
+        var h4 = document.querySelector("#h4")
+        var Start = document.querySelector("#Start")
+        var Stop = document.querySelector("#Stop")
+        var setted;
+        var count = 0; // if we make count here so the count is restart(when we press stop and after click start) from not the biginning
+        Start.addEventListener("click",function(){
+           setted = setInterval(function(){
+                h4.textContent = count;
+                count++;
+            },1000)
+        });
+
+        Stop.addEventListener("click",function(){
+           clearInterval(setted)
+        });
+
+
+    </script>
+</body>
+</html>

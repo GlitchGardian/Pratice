@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            position: relative;
+            font-family: poppins;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .error{
+            display: none;
+            color: red;
+            font-size: medium;
+            font-weight: 600;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <form method="get" action="">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="email" placeholder="Name">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+
+        <p id="error" class="error">Some value are Blank in above form</p>
+
+        <button>Submit</button>
+    </form>
+
+
+    <script>
+
+        let name = document.querySelector("#Name");
+        let email = document.querySelector("#email");
+        let password = document.querySelector("#password");
+        let form =  document.querySelector("form");
+        let error = document.querySelector("#error")
+
+
+       form.addEventListener("submit",function(e){
+            e.preventDefault();  //for prevent reload a page from click event
+
+            if(name.value === "" || password.value === "" || email.value === ""){
+             error.style.display = "inline-block";
+            }
+            else {
+                error.style.display = "none";
+                form.submit(); //this line submit the form
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+        body,html{
+            height: 100vh;
+            width: 100vw;
+        }
+        .tabs{
+            height: 10vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .tab{
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(49, 49, 230, 0.758);
+            border: rgba(0, 0, 0, 0.729) 2px solid;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .content{
+            padding: 30px;
+        }
+
+        .content01,.content02,.content03,.content04{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="tabs">
+        <div class="tab" id="01">Tab 01</div>
+        <div class="tab" id="02">Tab 02</div>
+        <div class="tab" id="03">Tab 03</div>
+        <div class="tab" id="04">Tab 04</div>
+    </div>
+
+    <div class="content">
+        <p class="content01">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p class="content02">rgerub urfvuerbu rth44uyt4 tesyurvnywyn eerwtub yuy</p>
+        <p class="content03">tyuriu teievsnusuv eryncrvyiwauw wertenywn erynw4tuayvit</p>
+        <p class="content04">rttnurbsery  wetbvrbetyve yniunkyumn escrawesr tfnuyhjbtf</p>
+    </div>
+
+    <script>
+        let tabs = document.querySelector(".tabs");
+        let content = document.querySelector(".content")
+        let content1 = document.querySelector(".content01");
+        let content2 = document.querySelector(".content02");
+        let content3 = document.querySelector(".content03");
+        let content4 = document.querySelector(".content04");
+
+        tabs.addEventListener("click",function(dets){
+            if(dets.target.id === "01"){
+                alltextremove();
+                content1.style.display = "inline-block"
+            }
+            else if(dets.target.id === "02"){
+                alltextremove();
+                content2.style.display = "inline-block"
+            }
+            else if(dets.target.id === "03"){
+                alltextremove();
+                content3.style.display = "inline-block"
+            }
+            else if(dets.target.id === "04"){
+                alltextremove();
+                content4.style.display = "inline-block"
+            }
+            else{
+                content.style.display = "none"
+            }
+        })
+
+        function alltextremove(){
+            document.querySelectorAll("p").forEach(function(para){  //querySelectorAll() ma ek pachi ek p aavshe means list ma aavshe to foreach lagadvu jaruri che.
+                para.style.display = "none";
+            })
+        }
+    </script>
+
+</body>
+</html>

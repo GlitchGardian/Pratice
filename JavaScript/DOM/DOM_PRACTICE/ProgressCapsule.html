@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: poppins;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            background-color: rgba(23, 22, 22, 0.692);
+        }
+
+        .progresscapsule {
+            height: 15px;
+            width: 150px;
+            background-color: aliceblue;
+            border-radius: 50px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: aqua;
+            border-radius: 50px;
+            transition: all linear;
+        }
+
+        .download {
+            padding: 15px 100px;
+            background-color: aquamarine;
+            color: black;
+            border-radius: 10px;
+            border: 2px solid rgba(56, 54, 54, 0.737);
+            font-size: medium;
+            font-weight: 600;
+            box-shadow: 5px 10px red;
+        }
+
+        .dc {
+            display: none;
+        }
+
+        .di {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progresscapsule">
+        <div class="progress"></div>
+    </div>
+
+
+    <p class="di">Download Initiated...</p>
+    <p class="dc">Download Completed</p>
+
+    <button class="download">Download now</button>
+
+    </button>
+
+    <script>
+        let progcap = document.querySelector(".progresscapsule");
+        let progress = document.querySelector(".progress");
+        let dbtn = document.querySelector(".download");
+        let para1 = document.querySelector(".di");
+        let para2 = document.querySelector(".dc");
+
+        dbtn.addEventListener("click", function () {
+            let conunt = 0;
+            let setup = setInterval(function () {
+                if (conunt === 100) {
+                    clearInterval(setup);
+                    para1.style.display = "none"
+                    para2.style.display = "inline-block"
+
+                }
+                else {
+                    progress.style.width = conunt + "%";
+                    conunt++;
+                    para1.style.display = "inline-block"
+                    para2.style.display = "none"
+                }
+            }, 10)
+        })
+
+    </script>
+</body>
+
+</html>

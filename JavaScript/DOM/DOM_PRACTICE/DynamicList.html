@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>No item Available in list which is you want to remove</p>
+
+    <ul id="unlist">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Mango</li>
+    </ul>
+
+    <div id="parbtn">
+        <button id="add">Add New Item</button>
+        <button id="remove">Remove the item</button>
+    </div>
+    <script>
+
+        let unlist = document.querySelector("#unlist");
+        let li = document.querySelector("li");
+        let parbtn = document.querySelector("#parbtn")
+        let err = document.querySelector("p")
+        let newLi // we declare here bcuz if we declare in the function so the scope is not available in other function.
+        
+        parbtn.addEventListener("click",function(dets) {
+            if(dets.target.id === "add"){
+                let userinp = prompt("Name of the Item: ");
+                newLi = document.createElement("li");  
+                newLi.textContent = userinp
+                unlist.appendChild(newLi);
+            }
+            else if(dets.target.id === "remove"){
+                unlist.removeChild(newLi);
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

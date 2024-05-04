@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: poppins;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.651);
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .searchbar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            height: 50px;
+            width: 70%;
+            margin: 0 auto;
+            border-radius: 50px;
+        }
+
+        .searchSpace {
+            height: 100%;
+            width: 90%;
+        }
+
+        .searchSpace input {
+            width: 100%;
+            height: 60%;
+            padding: 10px;
+            background-color: blanchedalmond;
+            border: 2px solid rgb(239, 187, 110);
+            border-radius: 20px;
+            outline-color: rgb(239, 187, 110);
+        }
+
+        .search-icon {
+            height: 100%;
+            width: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .search-icon i {
+            font-size: 20px;
+            background-color: gold;
+            padding: 15px;
+            border: 2px solid rgb(239, 187, 110);
+            border-radius: 20px;
+        }
+
+        .peoples {
+            height: 70%;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .person {
+            height: 45%;
+            width: 24%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .person .imgofperson {
+            height: 90%;
+            width: 100%;
+            object-position: top;
+            object-fit: cover;
+        }
+
+        .person .name {
+            height: 10%;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 2px;
+            background-color: rgba(180, 213, 243, 0.611);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="searchbar">
+            <div class="searchSpace">
+                <input id="text" type="text" placeholder="Enter Here...">
+            </div>
+            <div class="search-icon">
+                <i class="ri-search-line"></i>
+            </div>
+        </div>
+
+        <div class="peoples">
+
+        </div>
+    </div>
+    <script>
+
+        let peoples = document.querySelector(".peoples");
+        let input = document.querySelector("input");
+
+        let per = ""; //ahiya blank atle che bcuz aa no kariye to ek person ni sathe undefine pan add thy. 
+
+        let arr = [{ name: "dom hill", src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZWx8ZW58MHx8MHx8fDA%3D" },
+        { name: "Aiont", src: "https://images.unsplash.com/photo-1564485377539-4af72d1f6a2f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1vZGVsfGVufDB8fDB8fHww" },
+        { name: "Ayo", src: "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fG1vZGVsfGVufDB8fDB8fHww" },
+        { name: "Aiofs", src: "https://images.unsplash.com/photo-1495385794356-15371f348c31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTJ8fG1vZGVsfGVufDB8fDB8fHww" }];
+
+        arr.forEach(function (e) {
+            per += ` <div class="person">
+                <img class="imgofperson" src="${e.src}" alt="">
+                <p class="name">${e.name}</p>
+            </div>`
+        })
+
+        peoples.innerHTML = per;
+
+        input.addEventListener("input",function(){
+
+            let matchcase = arr.filter(function(ele){
+                return ele.name.startsWith(input.value);
+            })
+
+            let newuser = "";
+
+            matchcase.forEach(function (e) {
+            newuser += ` <div class="person">
+                <img class="imgofperson" src="${e.src}" alt="">
+                <p class="name">${e.name}</p>
+            </div>`
+        })
+
+        peoples.innerHTML = newuser;
+
+        })
+
+
+    </script>
+</body>
+
+</html>

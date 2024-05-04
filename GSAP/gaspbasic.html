@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(51, 193, 26);
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(238, 231, 31);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        gsap.to(".box1",{
+            x : 1000,
+            backgroundColor : "red",
+            delay : 1,
+            duration : 2
+        })
+        gsap.to(".box2",{
+            x : 1000,
+            backgroundColor : "black",
+            delay : 1,
+        })
+        gsap.to(".box3",{
+            x : 1000,
+            backgroundColor : "royalblue",
+            delay : 1,
+        })
+
+    </script>
+</body>
+
+</html>

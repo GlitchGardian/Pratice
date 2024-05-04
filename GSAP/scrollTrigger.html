@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .page1 {
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(132, 244, 106);
+        }
+
+        .page3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(242, 232, 102);
+        }
+
+        .circle {
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(to right bottom, rgb(255, 105, 105), rgb(0, 0, 243));
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="page1">
+        <div class="circle"></div>
+    </div>
+    <div class="page2">
+        <div class="circle"></div>
+    </div>
+    <div class="page3">
+        <div class="circle"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        gsap.to(".page2 .circle", {
+            rotate: 360,
+            scrollTrigger: {
+                markers: true,
+                trigger: ".page2 .circle",
+                start: "top 40%",
+                end: "bottom 40%",
+                scrub : 2,
+
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

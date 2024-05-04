@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imageSwap</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        img{
+            height: 400px;
+            width: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <img id="fstimg" src="https://images.unsplash.com/photo-1712921674876-83cda22594ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D" alt="">
+    <img id="scndimg" src="https://images.unsplash.com/photo-1712921675029-f455ad17bfc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D" alt="">
+
+    <button id="button">Swap</button>
+
+    <script>
+
+        var btn = document.querySelector("#button")
+        var firstimg = document.querySelector("#fstimg")
+        var secondimg = document.querySelector("#scndimg")
+
+        btn.addEventListener("click",function(){
+           var firstsrc = firstimg.src
+           var secondsrc = secondimg.src
+
+            firstimg.src = secondsrc
+            secondimg.src = firstsrc 
+            
+        })
+
+    </script>
+
+</body>
+</html>

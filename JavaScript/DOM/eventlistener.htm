@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .circle{
+            display: none;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border: black 2px solid;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>hey, Click on me</h1>
+
+    <div class="circle"></div>
+
+    <script>
+
+        var circle = document.querySelector("div")
+        
+        var body = document.querySelector("body")
+        body.addEventListener("mousemove", function(dets){  //syntax :  addEventListener("event",callback){})
+        circle.style.display = "inline"
+        circle.style.top = dets.clientY-50+'px';
+        circle.style.left = dets.clientX-50+'px';
+    })
+        var h1 = document.querySelector("h1")
+        h1.addEventListener("click", function(){  //syntax :  addEventListener("event",callback){})
+            h1.textContent = "Hey User..!"
+            h1.style.fontFamily = "poppins"
+        })
+        
+
+    </script>
+</body>
+</html>

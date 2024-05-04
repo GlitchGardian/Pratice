@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML VS textContent</title>
+</head>
+<body>
+    
+    <h1 id="Inner"></h1>
+    <h2 id="Text"></h2>
+
+    <script>
+
+    var Inner = document.querySelector("#Inner");
+    var Text = document.querySelector("#Text");
+
+    Inner.innerHTML = "<i> Hello </i>"  //it will take i tag as a html tag
+    Text.textContent = "<i> Hello </i>" // it print whole thing
+
+    </script>
+</body>
+</html>

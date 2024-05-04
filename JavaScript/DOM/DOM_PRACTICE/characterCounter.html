@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+
+        .main{
+            height: 100%;
+            width: 100%;
+        }
+
+        .container{
+            max-width: 90%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h3>Charecters : <span id="count"></span></h3>
+            <textarea id="ta"></textarea>
+        </div>
+    </div>
+
+    <script>
+
+        let counter = document.querySelector("#count");
+        let textarea = document.querySelector("#ta");
+
+        let count = 0;
+
+        // textarea.addEventListener("input",function(e){  but in this we have a problem if we delete all the things so the count is decrese by only 1.
+        //     if(e.inputType === "insertText"){
+        //         ++count;
+        //         counter.textContent = count;
+        //     }
+        //     else if(e.inputType === "deleteContentBackward"){
+        //         --count;
+        //         counter.textContent = count;
+        //     }
+        // })
+
+        // or easy way is below
+
+            textarea.addEventListener("input",function(){
+                counter.textContent = textarea.value.length;
+            })
+
+    </script>
+</body>
+
+</html>
