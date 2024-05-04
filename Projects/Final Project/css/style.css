@@ -367,27 +367,21 @@ html {
     padding: 2vw 0;
 }
 
-.arrow{
-    width: 30vw;
-    height: 100vh;
-    background-color: aqua;
-}
-
 .circle{
     height: 15vw;
     width: 15vw;
-    border-radius: 50%;
-    background-color: rgb(3, 21, 21);
+    color: transparent;
     border: 1px solid white;
+    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.circle i{
-    font-size: 5vw;
+    align-items: center;
 }
 
 
-
+.arrow .circle i {
+   font-size: 10vw;
+   color: transparent;
+   -webkit-text-stroke: 1px white;
+}
 
