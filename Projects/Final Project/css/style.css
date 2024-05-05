@@ -377,8 +377,6 @@ html {
 .About-page {
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(39, 40, 40);
-    padding-left: 28vw;
 }
 
 .About-page .content-page .inner p {
@@ -387,6 +385,7 @@ html {
 
 .aboutus-content {
     position: relative;
+    padding-left: 31vw;
 }
 
 .aboutus-content>p {
@@ -458,11 +457,13 @@ html {
     width: 40%;
 }
 
-.wework {
+#para-opacity-low {
     font-family: 'plain';
-    font-size: 1vw;
-    font-weight: 100;
+    font-size: 1.1vw;
+    font-weight: 400;
     padding: 2vw 0;
+    color: #ffffffa2;
+    margin: 0;
 }
 
 .marquee-text-page {
@@ -481,12 +482,12 @@ html {
 .marquee-texts h1 {
     flex-shrink: 0;
     font-family: 'plain';
-    font-size: 6vw;
+    font-size: 7.2vw;
     text-transform: uppercase;
     font-weight: 100;
     color: transparent;
     -webkit-text-stroke: 1px white;
-    animation: infiniteScroll 14s linear 1s infinite;
+    animation: infiniteScroll 20s linear 1s infinite;
     margin-right: 16px;
 }
 
@@ -512,3 +513,44 @@ html {
         transform: translateX(calc(-100% - 20px));
     }
 }
+
+.page-4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page-4 .texts-right .inner {
+    padding-bottom: 4vw;
+}
+
+.page-4 .texts-right .inner span svg {
+    height: 6vw;
+}
+
+.page-4 .contect {
+    display: flex;
+    justify-content: space-around;
+    padding: 4vw 16vw 0vw 22vw;
+}
+
+.page-4 .contect .contect-content h5 {
+    font-family: 'plain';
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding-top: 4vw;
+    padding-bottom: 2vw;
+}
+
+.page-4 .contect .contect-content h4 {
+    font-family: 'plain';
+    font-size: 1.8vw;
+    font-weight: 200;
+    line-height: 1.8vw;
+}
+
+.footer{
+    margin: 4vw 15vw 0vw 25vw;
+    padding-bottom: 6vw;
+}
+

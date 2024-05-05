@@ -155,6 +155,6 @@ function pagetwovideoplayer() {
 }
 pagetwovideoplayer();
 
-// pageonetextAnimation();
+pageonetextAnimation();
 
 
