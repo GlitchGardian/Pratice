@@ -1,3 +1,5 @@
+// closure means the fuction is return a function and use the parent function data(variable) is called closure. 
+
 function print(){
 
     var st = "asdad";

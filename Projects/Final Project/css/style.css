@@ -9,7 +9,8 @@ body,
 html {
     height: 100%;
     width: 100%;
-    cursor: none;
+    /* cursor: none; */
+    overflow: hidden;
 }
 
 .loader {
@@ -524,6 +525,12 @@ html {
     padding-bottom: 4vw;
 }
 
+
+
+.page-4 .texts-right .inner p span{
+    letter-spacing: -2vw;
+}
+
 .page-4 .texts-right .inner span svg {
     height: 6vw;
 }
@@ -553,4 +560,5 @@ html {
     margin: 4vw 15vw 0vw 25vw;
     padding-bottom: 6vw;
 }
+
 
